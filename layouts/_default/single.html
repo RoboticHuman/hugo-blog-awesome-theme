@@ -12,6 +12,9 @@
             <div class="page-content">
                 {{ .Content }}
             </div>
+            {{ with site.Params.dnb.giscus }}
+                {{ partial "content/giscus.html" . }}
+            {{ end }}
         </article>
     </main>
 </div>
